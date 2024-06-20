@@ -1,3 +1,6 @@
+const button = document.querySelector("button");
+const repairList = document.querySelector(".need-repair");
+
 const createVehicle = function (type, numWheels, color) {
     const vehicle = {
         type:type,
