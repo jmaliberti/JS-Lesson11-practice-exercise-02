@@ -21,3 +21,13 @@ for (let vehicle of myVehicles){ //looping through an array
     for (let key in vehicle){ //looping through object
         console.log(key, vehicle[key])};
 };
+
+bike.needsRepair = true;
+skateboard.needsRepair = true;
+
+button.addEventListener("click", function () {
+    repairList.innerHTML = "";
+    const vehicleRepairList = myVehicles.filter(function (vehicle) {
+        return vehicle.needsRepair = true;
+    }); 
+});
