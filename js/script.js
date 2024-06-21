@@ -28,6 +28,11 @@ skateboard.needsRepair = true;
 button.addEventListener("click", function () {
     repairList.innerHTML = "";
     const vehicleRepairList = myVehicles.filter(function (vehicle) {
-        return vehicle.needsRepair = true;
+        return vehicle.needsRepair === true;
     }); 
+    for (let vehicle of vehicleRepairList) {
+        let li = document.createElement("li");
+        li.innerHTML = `My <span>${vehicle.type}</span> needs some 💜`;
+        repairList.append(li);
+    };
 });
